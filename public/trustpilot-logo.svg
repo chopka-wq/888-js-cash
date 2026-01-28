@@ -1,0 +1,25 @@
+<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00B67A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00A86B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Trustpilot Star -->
+  <path d="M 20 30 L 23.09 38.09 L 32 35 L 23.09 38.09 L 20 46 L 16.91 38.09 L 8 35 L 16.91 38.09 Z" fill="url(#starGradient)" stroke="#00A86B" stroke-width="0.5"/>
+  <!-- Trustpilot Text -->
+  <text x="45" y="38" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">Trustpilot</text>
+  <!-- 5 Stars Rating -->
+  <g transform="translate(0, 45)">
+    <rect x="0" y="0" width="16" height="16" fill="#00B67A" rx="2"/>
+    <path d="M 8 3 L 9.5 7 L 14 7.5 L 10.5 10.5 L 11.5 15 L 8 12.5 L 4.5 15 L 5.5 10.5 L 2 7.5 L 6.5 7 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
+    <rect x="20" y="0" width="16" height="16" fill="#00B67A" rx="2"/>
+    <path d="M 28 3 L 29.5 7 L 34 7.5 L 30.5 10.5 L 31.5 15 L 28 12.5 L 24.5 15 L 25.5 10.5 L 22 7.5 L 26.5 7 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
+    <rect x="40" y="0" width="16" height="16" fill="#00B67A" rx="2"/>
+    <path d="M 48 3 L 49.5 7 L 54 7.5 L 50.5 10.5 L 51.5 15 L 48 12.5 L 44.5 15 L 45.5 10.5 L 42 7.5 L 46.5 7 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
+    <rect x="60" y="0" width="16" height="16" fill="#00B67A" rx="2"/>
+    <path d="M 68 3 L 69.5 7 L 74 7.5 L 70.5 10.5 L 71.5 15 L 68 12.5 L 64.5 15 L 65.5 10.5 L 62 7.5 L 66.5 7 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
+    <rect x="80" y="0" width="16" height="16" fill="#00B67A" rx="2"/>
+    <path d="M 88 3 L 89.5 7 L 94 7.5 L 90.5 10.5 L 91.5 15 L 88 12.5 L 84.5 15 L 85.5 10.5 L 82 7.5 L 86.5 7 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
+  </g>
+</svg>

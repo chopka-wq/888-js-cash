@@ -1,0 +1,375 @@
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-dark-red) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.methods {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.methods h2,
+.security h2,
+.password h2,
+.troubleshooting h2,
+.bestPractices h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-black);
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.methodsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--card-gap);
+}
+
+.methodCard {
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-card);
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.methodCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(177, 18, 18, 0.15);
+}
+
+.methodIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.securityBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius-button);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.methodCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.methodCard p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.security {
+  padding: 80px 0;
+  background-color: var(--color-light-gray);
+}
+
+.securityGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--card-gap);
+}
+
+.securityCard {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-card);
+  padding: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.securityCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(177, 18, 18, 0.15);
+}
+
+.securityCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.securityDescription {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.securityBenefit {
+  color: var(--color-green);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.securityBenefit span {
+  font-size: 1.25rem;
+}
+
+.password {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.passwordList {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-card);
+  padding: 3rem;
+}
+
+.passwordList ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.passwordList li {
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.passwordList li::before {
+  content: "🔒";
+  position: absolute;
+  left: 0;
+}
+
+.passwordStrength {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-card);
+  padding: 3rem;
+}
+
+.passwordStrength h3 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.strengthLevels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.strengthItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.strengthBar {
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.strengthBar.weak {
+  background: linear-gradient(90deg, #ff4444 0%, #ff6666 100%);
+}
+
+.strengthBar.medium {
+  background: linear-gradient(90deg, #ffaa00 0%, #ffcc00 100%);
+}
+
+.strengthBar.strong {
+  background: linear-gradient(90deg, #28a745 0%, #5cb85c 100%);
+}
+
+.strengthItem span {
+  color: #666;
+  font-size: 1rem;
+}
+
+.troubleshooting {
+  padding: 80px 0;
+  background-color: var(--color-light-gray);
+}
+
+.troubleshootingList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--card-gap);
+}
+
+.troubleshootingItem {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-card);
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.troubleshootingItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(177, 18, 18, 0.15);
+}
+
+.troubleshootingItem h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-red);
+}
+
+.troubleshootingItem p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.bestPractices {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.bestPractices h2 {
+  margin-bottom: 3rem;
+}
+
+.practicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--card-gap);
+}
+
+.practiceCard {
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-card);
+  padding: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.practiceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(177, 18, 18, 0.15);
+  background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-white) 100%);
+}
+
+.practiceCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.practiceCard p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-dark-red) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .methods,
+  .security,
+  .password,
+  .troubleshooting,
+  .bestPractices,
+  .cta {
+    padding: 60px 0;
+  }
+
+  .methodsGrid,
+  .securityGrid,
+  .troubleshootingList,
+  .practicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .passwordList ul {
+    grid-template-columns: 1fr;
+  }
+
+  .strengthItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

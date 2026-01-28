@@ -1,0 +1,402 @@
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-dark-red) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.steps {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.steps h2,
+.benefits h2,
+.requirements h2,
+.verification h2,
+.faq h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-black);
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--card-gap);
+}
+
+.stepCard {
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-card);
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(177, 18, 18, 0.15);
+}
+
+.stepNumber {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-dark-red) 100%);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: var(--font-montserrat);
+  box-shadow: 0 4px 12px rgba(177, 18, 18, 0.3);
+}
+
+.stepIcon {
+  font-size: 3rem;
+  margin: 1rem 0;
+  display: block;
+}
+
+.stepCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.stepCard p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.benefits {
+  padding: 80px 0;
+  background-color: var(--color-light-gray);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--card-gap);
+}
+
+.benefitCard {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-card);
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(177, 18, 18, 0.15);
+}
+
+.benefitStats {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-red);
+  margin-bottom: 1rem;
+  font-family: var(--font-montserrat);
+}
+
+.benefitCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.benefitCard p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.requirements {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.requirementsList {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-card);
+  padding: 3rem;
+}
+
+.requirementsList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.requirementsList li {
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.requirementsList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.requirementsNote {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(242, 183, 5, 0.1);
+  border-left: 4px solid var(--color-gold);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-button);
+}
+
+.requirementsNote p {
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.verification {
+  padding: 80px 0;
+  background-color: var(--color-light-gray);
+}
+
+.verificationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--card-gap);
+  margin-bottom: 3rem;
+}
+
+.verificationCard {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-card);
+  padding: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.verificationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(177, 18, 18, 0.15);
+}
+
+.verificationCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-black);
+}
+
+.verificationPurpose {
+  color: var(--color-red);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.documentsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.documentsList li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: #666;
+  line-height: 1.7;
+}
+
+.documentsList li::before {
+  content: "📄";
+  position: absolute;
+  left: 0;
+}
+
+.verificationTimeline {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-card);
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.verificationTimeline h3 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-button);
+}
+
+.timelineTime {
+  font-weight: 800;
+  color: var(--color-red);
+  font-size: 1.1rem;
+  min-width: 120px;
+  font-family: var(--font-montserrat);
+}
+
+.timelineAction {
+  color: #333;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.faq {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--card-gap);
+}
+
+.faqItem {
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-card);
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faqItem h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.faqItem p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-dark-red) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .steps,
+  .benefits,
+  .requirements,
+  .verification,
+  .faq,
+  .cta {
+    padding: 60px 0;
+  }
+
+  .stepsGrid,
+  .benefitsGrid,
+  .verificationGrid,
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .timelineTime {
+    min-width: auto;
+  }
+}

@@ -1,0 +1,231 @@
+.header {
+  background-color: var(--color-black);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navList a {
+  color: var(--color-white);
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 0.5rem 0;
+}
+
+.navList a:hover {
+  color: var(--color-gold);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.loginButton {
+  color: var(--color-white);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--border-radius-button);
+  font-weight: 500;
+  transition: background-color 0.2s;
+  border: 1px solid var(--color-white);
+}
+
+.loginButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.registerButton {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--border-radius-button);
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.registerButton:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 1024px) {
+  .navList {
+    gap: 1rem;
+  }
+
+  .navList a {
+    font-size: 0.9rem;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburgerLine {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover .hamburgerLine {
+  background-color: var(--color-gold);
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: -100%;
+  width: 280px;
+  max-width: 85vw;
+  height: calc(100vh - 60px);
+  background-color: var(--color-black);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.mobileMenuOpen {
+  right: 0;
+}
+
+.mobileMenuOverlay {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.mobileMenuList {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.mobileMenuList li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenuList li:last-child {
+  border-bottom: none;
+}
+
+.mobileMenuList a {
+  display: block;
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.mobileMenuList a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-gold);
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    height: 60px;
+    padding: 0 1rem;
+  }
+
+  .navList {
+    display: none;
+  }
+
+  .actions {
+    gap: 0.5rem;
+  }
+
+  .loginButton,
+  .registerButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .mobileMenuOverlay {
+    display: block;
+  }
+
+  .languageSelect {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

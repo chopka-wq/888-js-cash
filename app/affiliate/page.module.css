@@ -1,0 +1,149 @@
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-dark-red) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.textContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-black);
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.benefitsList {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.benefitsList li {
+  padding: 1rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.benefitsList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.statCard {
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-dark-red) 100%);
+  border-radius: var(--border-radius-card);
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(177, 18, 18, 0.3);
+}
+
+.statValue {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--font-montserrat);
+  margin-bottom: 0.5rem;
+  color: var(--color-gold);
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .statCard {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .content {
+    padding: 60px 0;
+  }
+
+  .textContent h2 {
+    font-size: 2rem;
+  }
+
+  .statCard {
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,66 @@
+# Project overview
+- Tech stack: Node.js, Next.js (App Router), TypeScript, ESLint, Prettier.
+- Goal: SEO-friendly marketing website with fast load and SSR/SSG.
+- Target: content pages with static generation and dynamic pages with SSR.
+
+# Architecture rules
+- Use file-based routing (Next.js app directory).
+- **REQUIRED**: Use Server-Side Rendering (SSR) or Static Site Generation (SSG) for all content pages.
+  - All page components must be Server Components by default (no "use client" directive).
+  - Use `export const metadata: Metadata` for static pages with static generation.
+  - Use `export async function generateMetadata()` for dynamic pages with params.
+  - Use `export const revalidate` for Incremental Static Regeneration (ISR) when needed.
+- **REQUIRED**: Avoid client-side rendering for primary content - search engines must see full HTML immediately.
+  - Only use "use client" for interactive components that require browser APIs (timers, event handlers, DOM manipulation).
+  - Keep client components minimal and isolated - extract interactive parts, keep content as Server Components.
+  - Use `next/dynamic` with `ssr: false` ONLY for truly client-only components (charts, widgets that require browser APIs).
+- For dynamic SEO pages: use server-side data fetching only when necessary.
+- Keep components small and reusable.
+
+# Performance rules
+- **REQUIRED**: Minimize unnecessary JavaScript - avoid client-side rendering for static content.
+  - This rule applies to ALL pages and components (current and future).
+  - All page content must be server-rendered HTML visible to search engines.
+  - Never use client-side rendering for SEO-critical content (headings, text, images, metadata).
+  - Only load JavaScript when absolutely necessary for interactivity.
+  - Avoid importing heavy libraries unless they're essential - prefer lightweight alternatives.
+- **REQUIRED**: Use lazy-loading for heavy components.
+  - Use `next/dynamic` with `ssr: false` ONLY for truly client-only components (charts, widgets that require browser APIs).
+  - Prefer `ssr: true` (default) to ensure content is available in initial HTML.
+  - Lazy-load components that are below the fold or not immediately visible.
+  - Lazy-load third-party scripts and widgets that are not critical for initial render.
+  - This rule is mandatory - heavy components must be lazy-loaded to improve initial page load performance.
+- **REQUIRED**: Leverage Next.js built-in optimizations - these are mandatory, not optional.
+  - **Image Optimization**: Always use `next/image` component for automatic image optimization.
+    - Automatic responsive images, WebP conversion, lazy loading.
+    - Never use regular <img> tags - always use `next/image`.
+    - Set appropriate `width` and `height` props for layout shift prevention.
+  - **Code Splitting**: Automatic code-splitting is enabled by default.
+    - Use dynamic imports (`next/dynamic`) for large dependencies and heavy components.
+    - Split vendor code from application code when possible.
+    - Avoid importing entire libraries when you only need specific functions.
+  - **Caching Strategies**: Use appropriate caching strategies for optimal performance.
+    - Use `export const revalidate` for Incremental Static Regeneration (ISR) when content needs periodic updates.
+    - Use `cache: 'force-cache'` for static data that doesn't change frequently.
+    - Use `cache: 'no-store'` only when data must be fresh on every request.
+  - Missing these optimizations is not acceptable - all pages must follow Next.js performance best practices.
+
+# SEO rules
+- **REQUIRED**: Every page (current and future) must have correct <title>, <meta> tags and Open Graph tags.
+  - This rule applies to ALL pages without exception - existing pages and any new pages created in the future.
+  - Use `export const metadata: Metadata` for static pages.
+  - Use `export async function generateMetadata()` for dynamic pages with params.
+  - Always include: title, description, openGraph (title, description, url, siteName, type).
+  - Missing or incorrect metadata is not acceptable - every page must be SEO-optimized.
+- **REQUIRED**: Use semantic HTML markup for better content understanding by search engines and assistive technologies.
+  - This rule applies to ALL pages (current and future) - semantic markup is mandatory, not optional.
+  - Always use semantic tags: <main>, <article>, <section>, <header>, <nav>, <footer>, <aside>.
+  - Use appropriate aria-* attributes for accessibility (aria-label, aria-labelledby, aria-describedby, role, etc.).
+  - Avoid generic <div> wrappers for main content areas - prefer semantic alternatives.
+  - Every page must have proper semantic structure: <main> for main content, <article> for standalone content, <section> for thematic grouping.
+  - Use aria-* attributes to enhance accessibility and help search engines understand page structure.
+  - Missing semantic markup is not acceptable - all pages must follow semantic HTML best practices.
+- Use heading structure: one <h1> per page, then h2/h3.
+- **REQUIRED**: All primary content must be server-rendered - search engines must see complete HTML, not empty divs waiting for JavaScript.
+  - Page structure, headings, text content, images - all must be in initial HTML response.
+  - Interactive features (accordions, tabs, modals) can be client components, but base content must be server-rendered.

@@ -1,0 +1,166 @@
+{
+    "brand": {
+      "name": "888Starz",
+      "industry": ["Online Casino", "Sports Betting", "Gambling"],
+      "tone": ["Aggressive", "Promotional", "Entertainment", "High-contrast"],
+      "positioning": "Fast-growing international betting and casino platform with strong bonus focus"
+    },
+  
+    "colorPalette": {
+      "primary": {
+        "red": "#B11212",
+        "darkRed": "#8C0E0E",
+        "black": "#0B0B0B"
+      },
+      "secondary": {
+        "white": "#FFFFFF",
+        "lightGray": "#F5F5F5",
+        "gray": "#D9D9D9"
+      },
+      "accent": {
+        "green": "#28A745",
+        "gold": "#F2B705"
+      },
+      "usage": {
+        "background": "White or very light gray",
+        "headers": "Dark red with white text",
+        "buttonsPrimary": "Red background, white text",
+        "buttonsSecondary": "Green background for Android, black/white for iOS",
+        "bonusHighlights": "Red + white + gold accents"
+      }
+    },
+  
+    "typography": {
+      "primaryFont": {
+        "name": "Inter",
+        "fallback": ["Arial", "Helvetica", "sans-serif"],
+        "usage": "Body text, buttons, UI labels"
+      },
+      "headingFont": {
+        "name": "Montserrat",
+        "fallback": ["Arial", "sans-serif"],
+        "usage": "Headings, section titles, promo banners"
+      },
+      "fontWeights": {
+        "regular": 400,
+        "medium": 500,
+        "bold": 700,
+        "extraBold": 800
+      }
+    },
+  
+    "layout": {
+      "grid": "Responsive grid, card-based layout",
+      "maxWidth": "1200–1400px",
+      "spacing": {
+        "sectionPadding": "24–40px",
+        "cardGap": "12–16px"
+      },
+      "borderRadius": {
+        "cards": "12px",
+        "buttons": "8px",
+        "promoBadges": "20–24px"
+      }
+    },
+  
+    "uiComponents": {
+      "header": {
+        "background": "Black",
+        "elements": [
+          "Logo (left)",
+          "Navigation links",
+          "Language switcher",
+          "Login button",
+          "Registration button (green)"
+        ],
+        "style": "Compact, high-contrast, sticky"
+      },
+  
+      "heroSection": {
+        "type": "Promotional banner",
+        "content": [
+          "Smartphone mockup",
+          "Bonus badge (+500%)",
+          "CTA buttons (iOS / Android)"
+        ],
+        "visualStyle": "Large imagery, red ribbons, gift boxes, casino icons"
+      },
+  
+      "buttons": {
+        "primary": {
+          "background": "Red",
+          "textColor": "White",
+          "hover": "Darker red"
+        },
+        "secondary": {
+          "background": "Green",
+          "textColor": "White"
+        }
+      },
+  
+      "cards": {
+        "gameCard": {
+          "elements": ["Game thumbnail", "Title"],
+          "hoverEffect": "Slight zoom or glow",
+          "background": "White"
+        },
+        "casinoCard": {
+          "style": "Colorful thumbnails, rounded corners",
+          "priority": "Visual appeal over text"
+        }
+      },
+  
+      "sections": [
+        {
+          "id": "sportsBetting",
+          "title": "Sports Betting",
+          "style": "Icon + short description"
+        },
+        {
+          "id": "casino",
+          "title": "Casino",
+          "style": "Grid of slot cards"
+        },
+        {
+          "id": "liveCasino",
+          "title": "Live Casino",
+          "style": "Dealer photos, dark overlays"
+        },
+        {
+          "id": "tvGames",
+          "title": "TV Games",
+          "style": "Show-like visuals, presenter focus"
+        }
+      ]
+    },
+  
+    "visualStyle": {
+      "imagery": [
+        "Casino chips",
+        "Dice",
+        "Playing cards",
+        "Live dealers",
+        "Mobile phones"
+      ],
+      "effects": [
+        "Shadows",
+        "Glow highlights",
+        "High saturation thumbnails"
+      ],
+      "iconStyle": "Flat icons with solid fills"
+    },
+  
+    "uxPatterns": {
+      "focus": [
+        "Bonuses",
+        "Fast registration",
+        "Mobile-first usage"
+      ],
+      "ctaStrategy": [
+        "Multiple CTA buttons per screen",
+        "Countdown timers",
+        "Promo codes blocks"
+      ]
+    }
+  }
+  

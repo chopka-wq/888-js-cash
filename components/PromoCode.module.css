@@ -1,0 +1,221 @@
+.promoSection {
+  background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-white) 100%);
+  padding: 60px 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-black);
+  font-size: 2.5rem;
+}
+
+.promoCard {
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-dark-red) 100%);
+  border-radius: var(--border-radius-card);
+  padding: 3rem;
+  color: var(--color-white);
+  box-shadow: 0 10px 30px rgba(177, 18, 18, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.promoCard::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(242, 183, 5, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.leftTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
+
+.leftText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.benefitsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.benefitsList li {
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.benefitsList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.timerLabel {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.timerValue {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--font-montserrat);
+  color: var(--color-gold);
+  text-shadow: 0 2px 10px rgba(242, 183, 5, 0.5);
+}
+
+.codeContainer {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.codeLabel {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.codeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-button);
+  backdrop-filter: blur(10px);
+}
+
+.code {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--font-montserrat);
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+}
+
+.copyButton {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-button);
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  background-color: #ffc107;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(242, 183, 5, 0.4);
+}
+
+.description {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .promoCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .leftTitle {
+    font-size: 1.75rem;
+  }
+
+  .timerValue {
+    font-size: 2.5rem;
+  }
+
+  .code {
+    font-size: 1.5rem;
+  }
+
+  .codeWrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .copyButton {
+    width: 100%;
+  }
+}
