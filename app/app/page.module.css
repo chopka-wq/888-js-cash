@@ -148,6 +148,17 @@
   line-height: 1.7;
 }
 
+.internalLink {
+  color: var(--color-gold);
+  text-decoration: underline;
+  transition: color 0.2s;
+  font-weight: 600;
+}
+
+.internalLink:hover {
+  color: #ffc107;
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 60px 0;

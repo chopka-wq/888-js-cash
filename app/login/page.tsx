@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Button from "@/components/Button";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
@@ -146,7 +147,7 @@ export default function LoginPage() {
           <p className={styles.subtitle}>
             Access your account securely and start playing. Learn about different
             login methods, security features, and how to troubleshoot common
-            login issues.
+            login issues. Don't have an account? <Link href="/registration" className={styles.internalLink}>Register</Link> now!
           </p>
         </div>
       </section>
@@ -157,7 +158,7 @@ export default function LoginPage() {
           <p className={styles.intro}>
             Choose from multiple secure login methods to access your 888Starz
             account. Each method offers different levels of convenience and
-            security.
+            security. After logging in, explore our <Link href="/casino" className={styles.internalLink}>casino games</Link> and claim your <Link href="/bonus" className={styles.internalLink}>bonuses</Link>.
           </p>
           <div className={styles.methodsGrid}>
             {loginMethods.map((method, index) => (

@@ -1,7 +1,7 @@
 .hero {
   background: linear-gradient(135deg, var(--color-dark-red) 0%, var(--color-red) 100%);
   color: var(--color-white);
-  padding: 80px 0;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
@@ -23,7 +23,7 @@
   padding: 0 var(--section-padding);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -32,7 +32,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .badge {
@@ -111,7 +111,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 0;
+    padding: 45px 0;
   }
 
   .title {

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./Button.module.css";
 import { ReactNode } from "react";
@@ -13,6 +15,8 @@ interface ButtonProps {
   external?: boolean;
 }
 
+const REFERRAL_URL = "https://open-step.net/ZqS7Rx";
+
 export default function Button({
   children,
   href,
@@ -26,6 +30,28 @@ export default function Button({
   const baseClassName = `${styles.button} ${styles[variant]} ${className}`.trim();
 
   if (href) {
+    if (external && href === REFERRAL_URL) {
+      // Use form with POST method for referral links to hide URL in status bar
+      return (
+        <form
+          method="post"
+          action={REFERRAL_URL}
+          style={{ display: "inline" }}
+          onSubmit={(e) => {
+            e.preventDefault();
+            window.open(REFERRAL_URL, "_blank", "noopener,noreferrer");
+          }}
+        >
+          <button
+            type="submit"
+            className={baseClassName}
+            aria-label={ariaLabel}
+          >
+            {children}
+          </button>
+        </form>
+      );
+    }
     if (external) {
       return (
         <a

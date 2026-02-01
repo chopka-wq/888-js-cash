@@ -27,16 +27,6 @@ const features: Feature[] = [
     title: "Fast Payments",
     description: "Instant deposits and withdrawals with multiple payment methods.",
   },
-  {
-    icon: "🔒",
-    title: "Secure & Licensed",
-    description: "Fully licensed and regulated with SSL encryption for your safety.",
-  },
-  {
-    icon: "📱",
-    title: "Mobile Optimized",
-    description: "Play anywhere, anytime with our mobile-optimized platform and apps.",
-  },
 ];
 
 export default function Features() {

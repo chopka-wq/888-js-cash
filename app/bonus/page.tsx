@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Button from "@/components/Button";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
@@ -58,7 +59,7 @@ export default function BonusPage() {
           <h1 id="bonus-title">Casino Bonuses & Promotions</h1>
           <p className={styles.subtitle}>
             Maximize your winnings with our exclusive bonuses and promotions.
-            From welcome bonuses to daily offers, we have something for everyone!
+            From welcome bonuses to daily offers, we have something for everyone! Use our <Link href="/promo-code" className={styles.internalLink}>promo codes</Link> to unlock special offers.
           </p>
         </div>
       </section>
@@ -69,7 +70,7 @@ export default function BonusPage() {
           <p className={styles.intro}>
             Take advantage of our generous bonus offers designed to maximize
             your gaming experience and winning potential. All bonuses come with
-            fair terms and conditions.
+            fair terms and conditions. Play your favorite <Link href="/casino" className={styles.internalLink}>casino games</Link> with these bonuses!
           </p>
           <div className={styles.grid}>
             {bonuses.map((bonus, index) => (
@@ -119,7 +120,7 @@ export default function BonusPage() {
               <h3>Bonus Validity</h3>
               <p>
                 Bonuses have expiration dates. Make sure to use your bonus within
-                the specified time frame, typically 30 days from activation.
+                the specified time frame, typically 30 days from activation. New players can <Link href="/registration" className={styles.internalLink}>register</Link> to claim welcome bonuses.
               </p>
             </article>
           </div>

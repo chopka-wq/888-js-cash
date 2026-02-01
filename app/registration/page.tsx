@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/Button";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
@@ -132,7 +133,7 @@ export default function RegistrationPage() {
           <p className={styles.subtitle}>
             Create your account in minutes and start enjoying the best online
             casino and sports betting experience. Follow our simple registration
-            guide to get started.
+            guide to get started. Already have an account? <Link href="/login" className={styles.internalLink}>Login</Link> here.
           </p>
         </div>
       </section>
@@ -162,7 +163,7 @@ export default function RegistrationPage() {
           <h2 id="registration-benefits">Benefits of Registration</h2>
           <p className={styles.intro}>
             When you register at 888Starz, you unlock a world of gaming
-            opportunities and exclusive benefits.
+            opportunities and exclusive benefits. Claim your welcome <Link href="/bonus" className={styles.internalLink}>bonus</Link> and explore our <Link href="/casino" className={styles.internalLink}>casino games</Link>.
           </p>
           <div className={styles.benefitsGrid}>
             {benefits.map((benefit, index) => (

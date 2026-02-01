@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/Button";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
@@ -47,7 +48,7 @@ export default function AppPage() {
           </div>
           <div className={styles.imageContainer}>
             <Image
-              src="/hero-app.png"
+              src="/hero-image.jpg"
               alt="888Starz Mobile App"
               width={400}
               height={800}
@@ -61,16 +62,16 @@ export default function AppPage() {
       <section className={styles.features} aria-labelledby="app-features">
         <div className={styles.container}>
           <h2 id="app-features">App Features</h2>
-          <p className={styles.intro}>
+            <p className={styles.intro}>
             Our mobile app brings the full 888Starz experience to your
             smartphone or tablet. Enjoy seamless gameplay, instant access to
-            bonuses, and all the features you love from our desktop platform.
+            <Link href="/bonus" className={styles.internalLink}> bonuses</Link>, and all the features you love from our desktop platform.
           </p>
           <div className={styles.grid}>
             <div className={styles.card}>
               <h3>Full Game Library</h3>
               <p>
-                Access all 500+ casino games and sports betting markets on
+                Access all 500+ <Link href="/casino" className={styles.internalLink}>casino games</Link> and sports betting markets on
                 mobile. Play slots, table games, live casino, and bet on sports
                 wherever you are.
               </p>
@@ -101,7 +102,7 @@ export default function AppPage() {
             <div className={styles.card}>
               <h3>Touch ID / Face ID</h3>
               <p>
-                Quick and secure login with biometric authentication. No need to
+                Quick and secure <Link href="/login" className={styles.internalLink}>login</Link> with biometric authentication. No need to
                 remember passwords - just use your fingerprint or face
                 recognition.
               </p>

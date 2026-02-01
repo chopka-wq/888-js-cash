@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PromoCode from "@/components/PromoCode";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
@@ -30,7 +31,7 @@ export default function PromoCodePage() {
         <div className={styles.container}>
           <h1 id="promo-title">Exclusive Promo Code</h1>
           <p className={styles.subtitle}>
-            Claim your exclusive welcome bonus using our special promo code.
+            Claim your exclusive welcome <Link href="/bonus" className={styles.internalLink}>bonus</Link> using our special promo code.
             Limited time offer - don't miss out!
           </p>
         </div>
@@ -45,7 +46,7 @@ export default function PromoCodePage() {
             <li>
               <div className={styles.stepContent}>
                 <h3>Register an Account</h3>
-                <p>Create your free 888Starz account in just a few minutes.</p>
+                <p>Create your free 888Starz account in just a few minutes. Learn more about the <Link href="/registration" className={styles.internalLink}>registration</Link> process.</p>
               </div>
             </li>
             <li>
@@ -57,7 +58,7 @@ export default function PromoCodePage() {
             <li>
               <div className={styles.stepContent}>
                 <h3>Make Your First Deposit</h3>
-                <p>Deposit a minimum of $20 to activate your bonus.</p>
+                <p>Deposit a minimum of $20 to activate your bonus and start playing <Link href="/casino" className={styles.internalLink}>casino games</Link>.</p>
               </div>
             </li>
             <li>

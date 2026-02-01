@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "./Button";
 import styles from "./ContentBlock.module.css";
 
 interface ContentBlockProps {
@@ -7,6 +8,11 @@ interface ContentBlockProps {
   imageSrc: string;
   imageAlt: string;
   reverse?: boolean;
+  actionButton?: {
+    text: string;
+    href: string;
+    external?: boolean;
+  };
 }
 
 export default function ContentBlock({
@@ -15,6 +21,7 @@ export default function ContentBlock({
   imageSrc,
   imageAlt,
   reverse = false,
+  actionButton,
 }: ContentBlockProps) {
   return (
     <section className={styles.section} aria-labelledby={`content-${title.toLowerCase().replace(/\s+/g, "-")}`}>
@@ -28,6 +35,18 @@ export default function ContentBlock({
               className={styles.text}
               dangerouslySetInnerHTML={{ __html: content }}
             />
+            {actionButton && (
+              <div className={styles.actionButton}>
+                <Button
+                  href={actionButton.href}
+                  variant="primary"
+                  external={actionButton.external}
+                  ariaLabel={actionButton.text}
+                >
+                  {actionButton.text}
+                </Button>
+              </div>
+            )}
           </div>
           <div className={styles.imageContent}>
             <Image

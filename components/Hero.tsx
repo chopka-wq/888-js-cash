@@ -29,7 +29,7 @@ export default function Hero() {
         <div className={styles.imageContainer}>
           <div className={styles.phoneMockup}>
             <Image
-              src="/hero-app.png"
+              src="/hero-image.jpg"
               alt="888Starz Mobile App - Special Offers and Bonuses"
               width={400}
               height={800}

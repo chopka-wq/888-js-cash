@@ -1,5 +1,5 @@
 .providers {
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: var(--color-light-gray);
 }
 
@@ -20,7 +20,7 @@
   text-align: center;
   font-size: 1.1rem;
   color: #666;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -28,18 +28,24 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--card-gap);
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.5rem;
+  overflow-x: auto;
 }
 
 .card {
   background-color: var(--color-white);
   border-radius: var(--border-radius-card);
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   transition: all 0.3s;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--color-gray);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card:hover {
@@ -49,27 +55,55 @@
 }
 
 .logo {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
   display: block;
+  line-height: 1;
 }
 
 .card h3 {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--color-black);
   font-weight: 600;
+  margin: 0;
+  word-break: break-word;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .providers {
-    padding: 60px 0;
+    padding: 45px 0;
+  }
+
+  .providers h2 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .card {
-    padding: 1.5rem;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card h3 {
+    font-size: 0.85rem;
   }
 }

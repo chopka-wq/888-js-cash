@@ -1,5 +1,5 @@
 .section {
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: var(--color-light-gray);
 }
 
@@ -16,7 +16,7 @@
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
 }
 
@@ -31,13 +31,13 @@
 .textContent {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .title {
   font-size: 2.5rem;
   color: var(--color-black);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .text {
@@ -58,6 +58,10 @@
 
 .text li {
   margin-bottom: 0.5rem;
+}
+
+.actionButton {
+  margin-top: 1.5rem;
 }
 
 .imageContent {
@@ -81,7 +85,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: 45px 0;
   }
 
   .content {
@@ -100,4 +104,15 @@
   .text {
     font-size: 1rem;
   }
+}
+
+.text :global(.internal-link) {
+  color: var(--color-gold);
+  text-decoration: underline;
+  transition: color 0.2s;
+  font-weight: 600;
+}
+
+.text :global(.internal-link:hover) {
+  color: #ffc107;
 }

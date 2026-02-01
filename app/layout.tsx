@@ -103,7 +103,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "888Starz",
     url: process.env.SITE_URL || "https://888starz.cash",
-    logo: `${process.env.SITE_URL || "https://888starz.cash"}/logo.svg`,
+    logo: `${process.env.SITE_URL || "https://888starz.cash"}/logo.jpg`,
     description:
       "888Starz - Fast-growing international betting and casino platform with strong bonus focus",
     sameAs: [

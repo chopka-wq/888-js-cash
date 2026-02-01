@@ -400,3 +400,14 @@
     min-width: auto;
   }
 }
+
+.internalLink {
+  color: var(--color-gold);
+  text-decoration: underline;
+  transition: color 0.2s;
+  font-weight: 600;
+}
+
+.internalLink:hover {
+  color: #ffc107;
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
 
@@ -17,26 +18,38 @@ export const metadata: Metadata = {
   },
 };
 
+function getRandomImage() {
+  const casinoImages = [
+    "/6-What-are-the-differences-between-high-roller-casinos-in-the-USA-and-those-operating-elsewhere.webp",
+    "/888starz-casino-slots.webp",
+    "/888starz-live-casino-logo-1-1200x900.jpg",
+    "/996a6f6739f18eabd4b2bd3ae0503257.webp",
+    "/hero-image.jpg",
+    "/Kasyno-888starz-ᐉ-Kasyno-888starz-online-ᐉ-bet942-net-1.png",
+  ];
+  return casinoImages[Math.floor(Math.random() * casinoImages.length)];
+}
+
 const gameCategories = [
   {
     title: "Slots",
     description: "Over 300 slot games with various themes, bonus features, and progressive jackpots.",
-    image: "/slots.svg",
+    image: getRandomImage(),
   },
   {
     title: "Live Casino",
     description: "Experience real dealers and authentic casino atmosphere with our live casino games.",
-    image: "/live-casino.svg",
+    image: getRandomImage(),
   },
   {
     title: "Table Games",
     description: "Classic table games including blackjack, roulette, baccarat, and poker variants.",
-    image: "/table-games.svg",
+    image: getRandomImage(),
   },
   {
     title: "TV Games",
     description: "Interactive TV-style games with live presenters and exciting game shows.",
-    image: "/tv-games.svg",
+    image: getRandomImage(),
   },
 ];
 
@@ -54,7 +67,7 @@ export default function CasinoPage() {
           <h1 id="casino-title">Online Casino Games</h1>
           <p className={styles.subtitle}>
             Discover our extensive collection of premium casino games from
-            leading providers. Play slots, table games, live casino, and more!
+            leading providers. Play slots, table games, live casino, and more! Don't forget to check out our exclusive <Link href="/bonus" className={styles.internalLink}>bonuses</Link> for new players.
           </p>
         </div>
       </section>
@@ -65,7 +78,7 @@ export default function CasinoPage() {
           <p className={styles.intro}>
             Explore our diverse collection of casino games, each category offering
             unique experiences and winning opportunities. From classic slots to
-            immersive live dealer games, find your perfect match.
+            immersive live dealer games, find your perfect match. You can also play these games on our mobile <Link href="/app" className={styles.internalLink}>app</Link> for the best experience.
           </p>
           <div className={styles.grid}>
             {gameCategories.map((category, index) => (
@@ -121,7 +134,7 @@ export default function CasinoPage() {
               <p>
                 Play anywhere, anytime. All our games are fully optimized for
                 mobile devices, offering the same quality experience on
-                smartphones and tablets.
+                smartphones and tablets. <Link href="/registration" className={styles.internalLink}>Register</Link> now to start playing!
               </p>
             </article>
           </div>

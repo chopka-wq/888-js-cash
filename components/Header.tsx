@@ -34,10 +34,10 @@ export default function Header() {
         <div className={styles.container}>
           <Link href="/" className={styles.logo} aria-label="888Starz Home">
             <Image
-              src="/logo.svg"
+              src="/logo.jpg"
               alt="888Starz Logo"
-              width={120}
-              height={40}
+              width={150}
+              height={50}
               priority
             />
           </Link>
@@ -53,24 +53,40 @@ export default function Header() {
           </ul>
 
           <div className={styles.actions}>
-            <a
-              href="https://open-step.net/ZqS7Rx"
-              className={styles.loginButton}
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
+            <form
+              method="post"
+              action="https://open-step.net/ZqS7Rx"
+              style={{ display: "inline" }}
+              onSubmit={(e) => {
+                e.preventDefault();
+                window.open("https://open-step.net/ZqS7Rx", "_blank", "noopener,noreferrer");
+              }}
             >
-              Login
-            </a>
-            <a
-              href="https://open-step.net/ZqS7Rx"
-              className={styles.registerButton}
-              role="button"
-              target="_blank"
-              rel="noopener noreferrer"
+              <button
+                type="submit"
+                className={styles.loginButton}
+                aria-label="Login"
+              >
+                Login
+              </button>
+            </form>
+            <form
+              method="post"
+              action="https://open-step.net/ZqS7Rx"
+              style={{ display: "inline" }}
+              onSubmit={(e) => {
+                e.preventDefault();
+                window.open("https://open-step.net/ZqS7Rx", "_blank", "noopener,noreferrer");
+              }}
             >
-              Register
-            </a>
+              <button
+                type="submit"
+                className={styles.registerButton}
+                aria-label="Register"
+              >
+                Register
+              </button>
+            </form>
           </div>
 
           <button

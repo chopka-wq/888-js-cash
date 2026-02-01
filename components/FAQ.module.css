@@ -1,5 +1,5 @@
 .faq {
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: var(--color-light-gray);
 }
 
@@ -11,7 +11,7 @@
 
 .title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 2.5rem;
   color: var(--color-black);
 }
@@ -36,7 +36,7 @@
 
 .question {
   width: 100%;
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
   text-align: left;
   background: none;
   border: none;
@@ -68,6 +68,8 @@
   justify-content: center;
   border-radius: 50%;
   background-color: rgba(177, 18, 18, 0.1);
+  line-height: 1;
+  text-align: center;
 }
 
 .icon.open {
@@ -78,12 +80,12 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-  padding: 0 2rem;
+  padding: 0 1.75rem;
 }
 
 .answer.open {
   max-height: 500px;
-  padding: 0 2rem 1.5rem;
+  padding: 0 1.75rem 1.25rem;
 }
 
 .answer p {
@@ -94,7 +96,7 @@
 
 @media (max-width: 768px) {
   .faq {
-    padding: 60px 0;
+    padding: 45px 0;
   }
 
   .question {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/Button";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
@@ -50,7 +51,7 @@ export default function ApkPage() {
             <h1 id="apk-title">Download 888Starz APK for Android</h1>
             <p className={styles.subtitle}>
               Get the full 888Starz experience on your Android device. Download
-              our APK file and enjoy casino games, sports betting, and exclusive
+              our APK file and enjoy <Link href="/casino" className={styles.internalLink}>casino games</Link>, sports betting, and exclusive
               bonuses on the go!
             </p>
           </div>
@@ -64,7 +65,7 @@ export default function ApkPage() {
                 <ul className={styles.featuresList}>
                   <li>
                     <strong>Full Access:</strong> All features available in the
-                    web version
+                    <Link href="/app" className={styles.internalLink}> app</Link> version
                   </li>
                   <li>
                     <strong>Faster Performance:</strong> Optimized for mobile
@@ -75,7 +76,7 @@ export default function ApkPage() {
                     internet
                   </li>
                   <li>
-                    <strong>Push Notifications:</strong> Never miss bonuses and
+                    <strong>Push Notifications:</strong> Never miss <Link href="/bonus" className={styles.internalLink}>bonuses</Link> and
                     promotions
                   </li>
                   <li>
@@ -91,7 +92,7 @@ export default function ApkPage() {
                 <div className={styles.downloadCard}>
                   <div className={styles.appIcon}>
                     <Image
-                      src="/logo.svg"
+                      src="/logo.jpg"
                       alt="888Starz App Icon"
                       width={120}
                       height={120}
