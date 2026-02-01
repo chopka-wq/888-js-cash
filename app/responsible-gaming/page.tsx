@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Responsible Gaming - 888Starz Online Casino",
   description:
     "Learn about responsible gaming at 888Starz. Discover tools, resources, and support for safe gambling. We promote responsible gaming and player protection.",
+  alternates: {
+    canonical: "/responsible-gaming",
+  },
   openGraph: {
     title: "Responsible Gaming - 888Starz Online Casino",
     description:

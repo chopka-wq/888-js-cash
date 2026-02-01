@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Login Guide - How to Access Your 888Starz Account | Security Tips",
   description:
     "Learn how to login to your 888Starz account securely. Complete guide to account access, password management, security features, and troubleshooting login issues.",
+  alternates: {
+    canonical: "/login",
+  },
   openGraph: {
     title: "Login Guide - How to Access Your 888Starz Account",
     description:

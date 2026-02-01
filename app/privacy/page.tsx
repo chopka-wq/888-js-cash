@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy - 888Starz Online Casino",
   description:
     "Learn how 888Starz protects your personal information and privacy. Read our comprehensive Privacy Policy covering data collection, usage, security, and your rights.",
+  alternates: {
+    canonical: "/privacy",
+  },
   openGraph: {
     title: "Privacy Policy - 888Starz Online Casino",
     description:

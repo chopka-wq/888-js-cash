@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Casino Bonuses & Promotions - Welcome Bonus 500% | 888Starz",
   description:
     "Claim your 500% welcome bonus at 888Starz. Get exclusive casino bonuses, free spins, cashback offers, and daily promotions. Best bonus deals for new and existing players.",
+  alternates: {
+    canonical: "/bonus",
+  },
   openGraph: {
     title: "Casino Bonuses & Promotions - Welcome Bonus 500% | 888Starz",
     description:

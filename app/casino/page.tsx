@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Online Casino Games - Slots, Table Games & Live Casino | 888Starz",
   description:
     "Play over 500 online casino games at 888Starz. Enjoy slots, blackjack, roulette, baccarat, and live dealer games from top providers. Best RTP rates and exciting jackpots.",
+  alternates: {
+    canonical: "/casino",
+  },
   openGraph: {
     title: "Online Casino Games - Slots, Table Games & Live Casino | 888Starz",
     description:

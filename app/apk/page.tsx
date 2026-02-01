@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Download APK - 888Starz Android App | Free Download",
   description:
     "Download 888Starz APK for Android. Get the latest version of our casino and sports betting app. Fast, secure, and free download. Install APK and start playing today!",
+  alternates: {
+    canonical: "/apk",
+  },
   openGraph: {
     title: "Download APK - 888Starz Android App | Free Download",
     description:

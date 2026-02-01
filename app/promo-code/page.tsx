@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Promo Code - Get 500% Welcome Bonus | 888Starz",
   description:
     "Use promo code WELCOME500 to claim your 500% welcome bonus at 888Starz. Exclusive promo codes for new players. Limited time offer!",
+  alternates: {
+    canonical: "/promo-code",
+  },
   openGraph: {
     title: "Promo Code - Get 500% Welcome Bonus | 888Starz",
     description:

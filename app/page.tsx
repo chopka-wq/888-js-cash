@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "888Starz - Online Casino & Sports Betting | Welcome Bonus 500%",
   description:
     "Join 888Starz - the best online casino and sports betting platform. Get up to 500% welcome bonus, play slots, live casino, and bet on sports. Fast registration, secure payments, 24/7 support.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "888Starz - Online Casino & Sports Betting | Welcome Bonus 500%",
     description:

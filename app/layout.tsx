@@ -39,9 +39,6 @@ export const metadata: Metadata = {
   creator: "888Starz",
   publisher: "888Starz",
   metadataBase: new URL(process.env.SITE_URL || "https://888starz.cash"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",

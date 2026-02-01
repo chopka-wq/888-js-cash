@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Registration Guide - How to Create Your 888Starz Account | Step-by-Step",
   description:
     "Learn how to register at 888Starz. Complete guide to account creation, verification process, welcome bonus activation, and getting started with online casino and sports betting.",
+  alternates: {
+    canonical: "/registration",
+  },
   openGraph: {
     title: "Registration Guide - How to Create Your 888Starz Account",
     description:

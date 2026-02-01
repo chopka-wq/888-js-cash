@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Affiliate Program - Earn Commissions | 888Starz",
   description:
     "Join the 888Starz affiliate program and earn generous commissions. Promote our casino and sports betting platform and get paid for every player you refer.",
+  alternates: {
+    canonical: "/affiliate",
+  },
   openGraph: {
     title: "Affiliate Program - Earn Commissions | 888Starz",
     description:

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Terms & Conditions - 888Starz Online Casino",
   description:
     "Read the complete Terms & Conditions for 888Starz online casino and sports betting platform. Understand your rights, responsibilities, and the rules governing our services.",
+  alternates: {
+    canonical: "/terms",
+  },
   openGraph: {
     title: "Terms & Conditions - 888Starz Online Casino",
     description:
