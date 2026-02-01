@@ -64,8 +64,7 @@ export default function ApkPage() {
                 <h2 id="download-info">Why Download Our APK?</h2>
                 <ul className={styles.featuresList}>
                   <li>
-                    <strong>Full Access:</strong> All features available in the
-                    <Link href="/app" className={styles.internalLink}> app</Link> version
+                    <strong>Full Access:</strong> All features available in the web version
                   </li>
                   <li>
                     <strong>Faster Performance:</strong> Optimized for mobile

@@ -78,7 +78,7 @@ export default function CasinoPage() {
           <p className={styles.intro}>
             Explore our diverse collection of casino games, each category offering
             unique experiences and winning opportunities. From classic slots to
-            immersive live dealer games, find your perfect match. You can also play these games on our mobile <Link href="/app" className={styles.internalLink}>app</Link> for the best experience.
+            immersive live dealer games, find your perfect match.
           </p>
           <div className={styles.grid}>
             {gameCategories.map((category, index) => (

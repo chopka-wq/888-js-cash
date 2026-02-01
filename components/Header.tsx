@@ -18,7 +18,6 @@ export default function Header() {
 
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/app", label: "App" },
     { href: "/apk", label: "APK" },
     { href: "/casino", label: "Casino" },
     { href: "/bonus", label: "Bonus" },

@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       />
       <div className={styles.container}>
         <h1>Privacy Policy</h1>
-        <p className={styles.lastUpdated}>Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+        <p className={styles.lastUpdated}>Last updated: February 1, 2026</p>
 
         <section className={styles.section}>
           <h2>1. Introduction</h2>

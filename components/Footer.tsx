@@ -24,9 +24,6 @@ export default function Footer() {
             <nav aria-label="Footer navigation">
               <ul>
                 <li>
-                  <Link href="/app">App</Link>
-                </li>
-                <li>
                   <Link href="/casino">Casino</Link>
                 </li>
                 <li>
